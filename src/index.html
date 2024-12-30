@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build blog website using HTML Tailwind css</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-[#0F172A]">
+    <div class="wrapper container mx-auto min-h-screen p-5">
+      <!-- Header -->
+      <header>
+        <div class="flex items-center justify-between h-24 p-5">
+          <a href="" class="inline-flex items-center gap-2">
+            <img src="../public/images/logo.svg" alt="" />
+            <span class="text-3xl text-[#D8E6FB] font-bold">Genz</span>
+          </a>
+
+          <!-- Desktop menu -->
+
+          <ul
+            id="desktop-menu"
+            class="hidden lg:flex items-center gap-9 text-[#94A9C9]"
+          >
+            <li>
+              <a href="" class="text-xl hover:text-[#1CC2E7]">Home</a>
+            </li>
+            <li>
+              <a href="" class="text-xl hover:text-[#1CC2E7]">Portfolio</a>
+            </li>
+            <li>
+              <a href="" class="text-xl hover:text-[#1CC2E7]">Clients</a>
+            </li>
+
+            <li>
+              <a href="" class="text-xl hover:text-[#1CC2E7]">Pricing</a>
+            </li>
+
+            <li>
+              <a href="" class="text-xl hover:text-[#1CC2E7]">Blog</a>
+            </li>
+            <li>
+              <a href="" class="text-xl hover:text-[#1CC2E7]">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Mobile Menu -->
+
+          <div
+            id="mobile-menu"
+            class="absolute top-0 left-0 w-full h-full hidden bg-[#0F172A] z-1000 items-center justify-center"
+          >
+            <ul class="flex flex-col items-center gap-9 text-[#94A9C9]">
+              <li>
+                <a href="" class="text-xl hover:text-[#1CC2E7]">Home</a>
+              </li>
+              <li>
+                <a href="" class="text-xl hover:text-[#1CC2E7]">Portfolio</a>
+              </li>
+              <li>
+                <a href="" class="text-xl hover:text-[#1CC2E7]">Clients</a>
+              </li>
+
+              <li>
+                <a href="" class="text-xl hover:text-[#1CC2E7]">Pricing</a>
+              </li>
+
+              <li>
+                <a href="" class="text-xl hover:text-[#1CC2E7]">Blog</a>
+              </li>
+              <li>
+                <a href="" class="text-xl hover:text-[#1CC2E7]">Contact</a>
+              </li>
+
+              <img
+                src="../public/images/close-menu.svg"
+                alt=""
+                class="cursor-pointer"
+                id="close-menu"
+              />
+            </ul>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <img
+              src="../public/images/open-menu.svg"
+              alt=""
+              class="lg:hidden"
+              id="open-menu"
+            />
+
+            <button
+              class="bg-[#0EA5EA] text-white px-4 py-2 rounded-md shadow-lg transition duration-300"
+            >
+              Subcribe
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero section -->
+
+      <section class="mt-24 flex flex-col items-center justify-center">
+        <p class="text-[#7F92B0] text-xl">Welcome to our blog</p>
+
+        <h1
+          class="text-6xl text-center text-white mt-5 font-bold max-w-[800px]"
+        >
+          Being <span class="text-[#0EA5EA]">unique</span> is better than being
+          <span class="text-[#0EA5EA]">perfect</span>
+        </h1>
+
+        <div class="mt-11 flex items-center justify-center gap-8 flex-wrap">
+          <div
+            class="flex items-center gap-2 px-10 py-4 bg-[#131C31] hover:bg-[#0b111f] transition duration-300 rounded-lg border border-[#222F43]"
+          >
+            <img src="../public/images/img_1.png" alt="" />
+            <span class="text-[#94A9C9]">Travel</span>
+          </div>
+
+          <div
+            class="flex items-center gap-2 px-10 py-4 bg-[#131C31] hover:bg-[#0b111f] transition duration-300 rounded-lg border border-[#222F43]"
+          >
+            <img src="../public/images/img_2.png" alt="" />
+            <span class="text-[#94A9C9]">Coding</span>
+          </div>
+
+          <div
+            class="flex items-center gap-2 px-10 py-4 bg-[#131C31] hover:bg-[#0b111f] transition duration-300 rounded-lg border border-[#222F43]"
+          >
+            <img src="../public/images/img_3.png" alt="" />
+            <span class="text-[#94A9C9]">Culture</span>
+          </div>
+
+          <div
+            class="flex items-center gap-2 px-10 py-4 bg-[#131C31] hover:bg-[#0b111f] transition duration-300 rounded-lg border border-[#222F43]"
+          >
+            <img src="../public/images/img_4.png" alt="" />
+            <span class="text-[#94A9C9]">Fashion</span>
+          </div>
+
+          <div
+            class="flex items-center gap-2 px-10 py-4 bg-[#131C31] hover:bg-[#0b111f] transition duration-300 rounded-lg border border-[#222F43]"
+          >
+            <img src="../public/images/img_5.png" alt="" />
+            <span class="text-[#94A9C9]">Animal</span>
+          </div>
+
+          <div
+            class="flex items-center gap-2 px-10 py-4 bg-[#131C31] hover:bg-[#0b111f] transition duration-300 rounded-lg border border-[#222F43]"
+          >
+            <img src="../public/images/img_6.png" alt="" />
+            <span class="text-[#94A9C9]">Food</span>
+          </div>
+
+          <div
+            class="flex items-center gap-2 px-10 py-4 bg-[#131C31] hover:bg-[#0b111f] transition duration-300 rounded-lg border border-[#222F43]"
+          >
+            <img src="../public/images/img_7.png" alt="" />
+            <span class="text-[#94A9C9]">Minimal</span>
+          </div>
+          <div
+            class="flex items-center gap-2 px-10 py-4 bg-[#131C31] hover:bg-[#0b111f] transition duration-300 rounded-lg border border-[#222F43]"
+          >
+            <img src="../public/images/img_8.png" alt="" />
+            <span class="text-[#94A9C9]">Lifestyle</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured posts section -->
+
+      <section class="mt-24 pb-5">
+        <!-- lists -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8">
+          <!-- card item -->
+          <div class="rounded-2xl border border-[#222F43] p-5">
+            <div class="w-full h-[300px]">
+              <img
+                src="../public/images/img_9.avif"
+                alt=""
+                class="rounded-2xl w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-5 flex items-center justify-between">
+              <div class="flex items-center gap-5">
+                <span class="text-[#66768F]">#Travel</span>
+                <span class="text-[#66768F]">#Lifestyle</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="../public/images/timer.svg" alt="" />
+                <span class="text-[#66768f]">3 mins read</span>
+              </div>
+            </div>
+
+            <h2 class="text-[#eef5ff] text-2xl mt-3 font-bold">
+              Are You Ready To Go Home After The Sunset View?
+            </h2>
+
+            <div class="mt-8 flex items-center justify-between">
+              <div class="flex items-center gap-5">
+                <img src="../public/images/img_10.png" alt="" />
+                <div>
+                  <p class="text-[#66768f] font-bold whitespace-nowrap">
+                    William Randolph
+                  </p>
+                  <small class="text-[#66768F]"> 25 April 2024 </small>
+                </div>
+              </div>
+              <a
+                href=""
+                class="px-3 py-2 whitespace-nowrap border border-[#66768F] text-[#66768F]"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!-- card item -->
+          <div class="rounded-2xl border border-[#222F43] p-5">
+            <div class="w-full h-[300px]">
+              <img
+                src="../public/images/img_11.jpg"
+                alt=""
+                class="rounded-2xl w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-5 flex items-center justify-between">
+              <div class="flex items-center gap-5">
+                <span class="text-[#66768F]">#Travel</span>
+                <span class="text-[#66768F]">#Lifestyle</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="../public/images/timer.svg" alt="" />
+                <span class="text-[#66768f]">3 mins read</span>
+              </div>
+            </div>
+
+            <h2 class="text-[#eef5ff] text-2xl mt-3 font-bold">
+              Life is as free as eagles, or is it just loneliness?
+            </h2>
+
+            <div class="mt-8 flex items-center justify-between">
+              <div class="flex items-center gap-5">
+                <img src="../public/images/img_10.png" alt="" />
+                <div>
+                  <p class="text-[#66768f] font-bold whitespace-nowrap">
+                    William Randolph
+                  </p>
+                  <small class="text-[#66768F]"> 25 April 2024 </small>
+                </div>
+              </div>
+              <a
+                href=""
+                class="px-3 py-2 whitespace-nowrap border border-[#66768F] text-[#66768F]"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!-- card item -->
+          <div class="rounded-2xl border border-[#222F43] p-5">
+            <div class="w-full h-[300px]">
+              <img
+                src="../public/images/img_12.jpg"
+                alt=""
+                class="rounded-2xl w-full h-full object-cover"
+              />
+            </div>
+            <div class="mt-5 flex items-center justify-between">
+              <div class="flex items-center gap-5">
+                <span class="text-[#66768F]">#Travel</span>
+                <span class="text-[#66768F]">#Lifestyle</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <img src="../public/images/timer.svg" alt="" />
+                <span class="text-[#66768f]">3 mins read</span>
+              </div>
+            </div>
+
+            <h2 class="text-[#eef5ff] text-2xl mt-3 font-bold">
+              Beautiful aurora in the sky over the city, a spectacular sight
+            </h2>
+
+            <div class="mt-8 flex items-center justify-between">
+              <div class="flex items-center gap-5">
+                <img src="../public/images/img_10.png" alt="" />
+                <div>
+                  <p class="text-[#66768f] font-bold whitespace-nowrap">
+                    William Randolph
+                  </p>
+                  <small class="text-[#66768F]"> 25 April 2024 </small>
+                </div>
+              </div>
+              <a
+                href=""
+                class="px-3 py-2 whitespace-nowrap border border-[#66768F] text-[#66768F]"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!--  -->
+        </div>
+      </section>
+
+      <!-- Trending topics section -->
+      <section class="mt-24 pb-5">
+        <h2 class="text-center text-5xl text-[#0bd1d1] font-bold">
+          Trending topics
+        </h2>
+        <p class="text-[#94A9C9] text-center text-xl mt-5">
+          Discover the most outstanding articles in all topics
+        </p>
+
+        <!-- Slider main container -->
+        <div class="swiper h-52 mt-16">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper gap-6">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="../public/images/img_13.png"
+                alt=""
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="absolute bottom-5 left-5 bg-black bg-opacity-50 flex flex-col items-center justify-center p-3 rounded-lg"
+              >
+                <p class="text-white font-bold">Travel</p>
+                <p class="text-[#94A9C9]">60 Articles</p>
+              </div>
+            </div>
+
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="../public/images/img_14.png"
+                alt=""
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="absolute bottom-5 left-5 bg-black bg-opacity-50 flex flex-col items-center justify-center p-3 rounded-lg"
+              >
+                <p class="text-white font-bold">Travel</p>
+                <p class="text-[#94A9C9]">60 Articles</p>
+              </div>
+            </div>
+
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="../public/images/img_15.png"
+                alt=""
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="absolute bottom-5 left-5 bg-black bg-opacity-50 flex flex-col items-center justify-center p-3 rounded-lg"
+              >
+                <p class="text-white font-bold">Travel</p>
+                <p class="text-[#94A9C9]">60 Articles</p>
+              </div>
+            </div>
+
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="../public/images/img_16.png"
+                alt=""
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="absolute bottom-5 left-5 bg-black bg-opacity-50 flex flex-col items-center justify-center p-3 rounded-lg"
+              >
+                <p class="text-white font-bold">Travel</p>
+                <p class="text-[#94A9C9]">60 Articles</p>
+              </div>
+            </div>
+
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="../public/images/img_17.png"
+                alt=""
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="absolute bottom-5 left-5 bg-black bg-opacity-50 flex flex-col items-center justify-center p-3 rounded-lg"
+              >
+                <p class="text-white font-bold">Travel</p>
+                <p class="text-[#94A9C9]">60 Articles</p>
+              </div>
+            </div>
+
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="../public/images/img_18.png"
+                alt=""
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="absolute bottom-5 left-5 bg-black bg-opacity-50 flex flex-col items-center justify-center p-3 rounded-lg"
+              >
+                <p class="text-white font-bold">Travel</p>
+                <p class="text-[#94A9C9]">60 Articles</p>
+              </div>
+            </div>
+
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img
+                src="../public/images/img_19.png"
+                alt=""
+                class="w-full h-full object-cover rounded-lg"
+              />
+              <div
+                class="absolute bottom-5 left-5 bg-black bg-opacity-50 flex flex-col items-center justify-center p-3 rounded-lg"
+              >
+                <p class="text-white font-bold">Travel</p>
+                <p class="text-[#94A9C9]">60 Articles</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent posts section -->
+      <section class="mt-24 pb-5">
+        <h2 class="text-start text-5xl text-[#0BD1D1] font-bold">
+          Recent posts
+        </h2>
+        <p class="text-start text-[#94A9C9] text-xl mt-5">
+          Don't miss the latest trends
+        </p>
+
+        <div class="w-full flex flex-col md:flex-row mt-14 gap-8">
+          <div class="w-full lg:w-[70%]">
+            <!-- Left -->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- card item -->
+              <div class="rounded-2xl border border-[#222F43] p-5">
+                <div class="w-full h-56">
+                  <img
+                    src="../public/images/img_9.avif"
+                    alt=""
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                <div class="mt-5 flex items-center justify-between">
+                  <div class="flex items-center gap-5">
+                    <span class="text-[#66768F]">#Travel</span>
+                    <span class="text-[#66768F]">#Lifestyle</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="../public/images/timer.svg" alt="" />
+                    <span class="text-[#66768F] text-sm"> 3 mins read </span>
+                  </div>
+                </div>
+                <h2 class="text-[#EEF5FF] text-2xl mt-3 font-bold">
+                  Are You Ready To Go Home After The Sunset View?
+                </h2>
+
+                <div class="mt-8 flex items-center justify-between">
+                  <div class="flex items-center gap-5">
+                    <img src="../public/images/img_10.png" alt="" />
+
+                    <div>
+                      <p class="text-[#66768F] font-bold whitespace-nowrap">
+                        William Randolph
+                      </p>
+                      <small class="text-[#66768F]">25 April 2024</small>
+                    </div>
+                  </div>
+                  <a
+                    href=""
+                    class="px-3 py-2 whitespace-nowrap border border-[#66768F] text-[#66768F] rounded-lg"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <!-- card item -->
+              <div class="rounded-2xl border border-[#222F43] p-5">
+                <div class="w-full h-56">
+                  <img
+                    src="../public/images/img_20.png"
+                    alt=""
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                <div class="mt-5 flex items-center justify-between">
+                  <div class="flex items-center gap-5">
+                    <span class="text-[#66768F]">#Travel</span>
+                    <span class="text-[#66768F]">#Lifestyle</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="../public/images/timer.svg" alt="" />
+                    <span class="text-[#66768F] text-sm"> 3 mins read </span>
+                  </div>
+                </div>
+                <h2 class="text-[#EEF5FF] text-2xl mt-3 font-bold">
+                  Are You Ready To Go Home After The Sunset View?
+                </h2>
+
+                <div class="mt-8 flex items-center justify-between">
+                  <div class="flex items-center gap-5">
+                    <img src="../public/images/img_10.png" alt="" />
+
+                    <div>
+                      <p class="text-[#66768F] font-bold whitespace-nowrap">
+                        William Randolph
+                      </p>
+                      <small class="text-[#66768F]">25 April 2024</small>
+                    </div>
+                  </div>
+                  <a
+                    href=""
+                    class="px-3 py-2 whitespace-nowrap border border-[#66768F] text-[#66768F] rounded-lg"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <!-- card item -->
+              <div class="rounded-2xl border border-[#222F43] p-5">
+                <div class="w-full h-56">
+                  <img
+                    src="../public/images/img_21.png"
+                    alt=""
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                <div class="mt-5 flex items-center justify-between">
+                  <div class="flex items-center gap-5">
+                    <span class="text-[#66768F]">#Travel</span>
+                    <span class="text-[#66768F]">#Lifestyle</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="../public/images/timer.svg" alt="" />
+                    <span class="text-[#66768F] text-sm"> 3 mins read </span>
+                  </div>
+                </div>
+                <h2 class="text-[#EEF5FF] text-2xl mt-3 font-bold">
+                  Are You Ready To Go Home After The Sunset View?
+                </h2>
+
+                <div class="mt-8 flex items-center justify-between">
+                  <div class="flex items-center gap-5">
+                    <img src="../public/images/img_10.png" alt="" />
+
+                    <div>
+                      <p class="text-[#66768F] font-bold whitespace-nowrap">
+                        William Randolph
+                      </p>
+                      <small class="text-[#66768F]">25 April 2024</small>
+                    </div>
+                  </div>
+                  <a
+                    href=""
+                    class="px-3 py-2 whitespace-nowrap border border-[#66768F] text-[#66768F] rounded-lg"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+
+              <!-- card item -->
+              <div class="rounded-2xl border border-[#222F43] p-5">
+                <div class="w-full h-56">
+                  <img
+                    src="../public/images/img_22.png"
+                    alt=""
+                    class="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                <div class="mt-5 flex items-center justify-between">
+                  <div class="flex items-center gap-5">
+                    <span class="text-[#66768F]">#Travel</span>
+                    <span class="text-[#66768F]">#Lifestyle</span>
+                  </div>
+
+                  <div class="flex items-center gap-2">
+                    <img src="../public/images/timer.svg" alt="" />
+                    <span class="text-[#66768F] text-sm"> 3 mins read </span>
+                  </div>
+                </div>
+                <h2 class="text-[#EEF5FF] text-2xl mt-3 font-bold">
+                  Are You Ready To Go Home After The Sunset View?
+                </h2>
+
+                <div class="mt-8 flex items-center justify-between">
+                  <div class="flex items-center gap-5">
+                    <img src="../public/images/img_10.png" alt="" />
+
+                    <div>
+                      <p class="text-[#66768F] font-bold whitespace-nowrap">
+                        William Randolph
+                      </p>
+                      <small class="text-[#66768F]">25 April 2024</small>
+                    </div>
+                  </div>
+                  <a
+                    href=""
+                    class="px-3 py-2 whitespace-nowrap border border-[#66768F] text-[#66768F] rounded-lg"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-[30%] flex flex-col gap-6">
+            <!-- Right -->
+            <div class="bg-[#131C31] p-5 rounded-lg border border-[#222F43]">
+              <h3 class="text-[#0BD1D1] text-2xl font-bold">Popular Posts</h3>
+
+              <!-- list -->
+
+              <div class="flex flex-col mt-14 gap-4">
+                <!-- item -->
+                <div class="flex items-start gap-4">
+                  <img src="../public/images/img_25.png" alt="" />
+                  <div>
+                    <p
+                      class="text-[#939393] hover:text-white text-xl font-medium"
+                    >
+                      Creating is a privilege but it’s also a gift
+                    </p>
+
+                    <small class="text-[#66768F]"
+                      >15 April 2022 - 15 mins read</small
+                    >
+
+                    <hr class="mt-6 bg-[#222F43] h-[1px] border-0" />
+                  </div>
+                </div>
+
+                <!-- item -->
+                <div class="flex items-start gap-4">
+                  <img src="../public/images/img_25.png" alt="" />
+                  <div>
+                    <p
+                      class="text-[#939393] hover:text-white text-xl font-medium"
+                    >
+                      Being unique is better than being perfect
+                    </p>
+
+                    <small class="text-[#66768F]"
+                      >15 April 2022 - 15 mins read</small
+                    >
+
+                    <hr class="mt-6 bg-[#222F43] h-[1px] border-0" />
+                  </div>
+                </div>
+
+                <!-- item -->
+                <div class="flex items-start gap-4">
+                  <img src="../public/images/img_25.png" alt="" />
+                  <div>
+                    <p
+                      class="text-[#939393] hover:text-white text-xl font-medium"
+                    >
+                      Every day, in every city and town across the country
+                    </p>
+
+                    <small class="text-[#66768F]"
+                      >15 April 2022 - 15 mins read</small
+                    >
+
+                    <hr class="mt-6 bg-[#222F43] h-[1px] border-0" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-[#131C31] p-5 rounded-lg border border-[#222F43]">
+              <h3 class="text-[#0BD1D1] text-2xl font-bold">
+                Follow us on instagram
+              </h3>
+
+              <div class="flex flex-col mt-11">
+                <div class="grid grid-cols-3 gap-5">
+                  <img
+                    src="../public/images/i1.png"
+                    alt=""
+                    class="rounded-lg"
+                  />
+                  <img
+                    src="../public/images/i2.png"
+                    alt=""
+                    class="rounded-lg"
+                  />
+                  <img
+                    src="../public/images/i3.png"
+                    alt=""
+                    class="rounded-lg"
+                  />
+                  <img
+                    src="../public/images/i4.png"
+                    alt=""
+                    class="rounded-lg"
+                  />
+                  <img
+                    src="../public/images/i5.png"
+                    alt=""
+                    class="rounded-lg"
+                  />
+                  <img
+                    src="../public/images/i6.png"
+                    alt=""
+                    class="rounded-lg"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+
+      <footer
+        class="p-5 md:p-24 bg-[#131C31] border-[#222F43] mt-24 grid grid-cols-1 lg:grid-cols-3 gap-12"
+      >
+        <div>
+          <a
+            href=""
+            class="flex items-center gap-2 text-[#7F92B0] text-4xl font-bold"
+          >
+            <img src="../public/images/logo.svg" alt="" />
+            Genz
+          </a>
+
+          <p class="mt-8 text-[#94A9C9] max-w-full md:max-w-[70%]">
+            When an unknown prnoto sans took a galley and scrambled it to make
+            specimen book not only five When an unknown prnoto sans took a
+            galley and scrambled it to five centurie.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-white text-xl">Categories</h3>
+          <div class="flex flex-col gap-5 mt-5">
+            <a href="" class="text-gray-500 hover:text-gray-200">Action</a>
+            <a href="" class="text-gray-500 hover:text-gray-200">Business</a>
+            <a href="" class="text-gray-500 hover:text-gray-200">Adventure</a>
+            <a href="" class="text-gray-500 hover:text-gray-200">Canada</a>
+            <a href="" class="text-gray-500 hover:text-gray-200">America</a>
+            <a href="" class="text-gray-500 hover:text-gray-200">Curiosity</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-white text-xl">Newsletter</h3>
+
+          <p class="mt-8 text-[#94A9C9]">
+            Sign up to be first to receive the latest stories inspiring us, case
+            studies, and industry news.
+          </p>
+
+          <input
+            placeholder="Enter your email"
+            type="text"
+            class="w-full h-11 bg-transparent border border-[#222F43] mt-5 px-6 text-gray-200 outline-none"
+          />
+
+          <button
+            class="bg-[#0EA5EA] text-white px-4 py-2 shadow-lg transition duration-300 mt-5"
+          >
+            Subcribe
+          </button>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./dev.js"></script>
+  </body>
+</html>
